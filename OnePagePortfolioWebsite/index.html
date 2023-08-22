@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>porfolio.com</title>
+    <!-- for language -->
+    <meta charset="utf-8" />
+
+    <!-- for Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- SEO-->
+    <meta name="author" content="Hifa Nur Öner" />
+    <meta name="description" content="one page " />
+    <meta name="keyword" content="Html5, Css3, Js, React, Bootstrap5" />
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <!-- font-awesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navbar_id">
+    <noscript>Bu browser javascripti desteklemiyor.</noscript>
+    <!-- start codes -->
+
+    <!-- start nav codes -->
+    <nav id="navbar_id" class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark fixed-top">
+        <div class="container"> <!-- container-fluid -->
+            <a class="navbar-brand" href="#header_id"><i class="fa-solid fa-circle-h"></i></a>
+            <!-- logo (font-awesome)-->
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> <!-- hamburgerMenu icon (font-awesome)-->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#header_id">Anasayfa</a>
+                    </li> <!-- HamburgerMenu - anasayfa -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parallax">Hakkımda</a>
+                    </li> <!-- HamburgerMenu - hakkımda -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newspaper">Haber</a>
+                    </li> <!-- HamburgerMenu - haber -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li> <!-- HamburgerMenu - blog -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
+                    </li> <!-- HamburgerMenu - iletişim -->
+                </ul>
+
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0"></ul>
+
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+                    <li class="search">
+                    <form class="d-flex" role="search">
+                        <input id="tags" class="form-control me-2" type="search" placeholder="Arama İçin ..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Ara</button> <!-- Arama Butonu -->
+                    </form>
+                </li>
+                <hr>
+                    <!-- Login-Register -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-user text-light"></i> <!-- UserLogin icon (font-awesome)-->
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginId">Giriş Yap</a>
+                            </li> <!-- login -->
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registerId">Kayıt
+                                    Ol</a></li> <!-- register -->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Misafir Girişi</a></li>
+                        </ul>
+                    </li> <!-- HamburgerMenu - Login / Register -->
+
+                    <!-- Language -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-earth-americas text-light"></i> <!-- Earth icon (font-awesome)-->
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#turkishId">Türkçe</a>
+                            </li> <!-- turkish -->
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#englishId">English</a>
+                            </li> <!-- english -->
+                        </ul>
+                    </li>
+                    <!-- DarkMode -->
+                    <li class="darkmode">
+                        <button class="btn btn-dark" onclick="darkModu()"> <i class="fa-solid fa-moon"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav codes -->
+
+    <!-- Login -->
+    <div class="modal fade" id="loginId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Giriş Yap</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form1Example1" class="form-control" />
+                            <label class="form-label" for="form1Example1">E-Mail</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="form1Example2" class="form-control" />
+                            <label class="form-label" for="form1Example2">Şifre</label>
+                        </div>
+
+                        <!-- 2 column grid layout for inline styling -->
+                        <div class="row mb-4">
+                            <div class="col d-flex justify-content-center">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input-" type="checkbox" value="" id="form1Example3"
+                                        checked />
+                                    <label class="form-check-label" for="form1Example3"> Beni Hatırla </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <!-- Simple link -->
+                                <a href="#!">Şifreyi Unuttum</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register -->
+    <div class="modal fade" id="registerId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Kayıt Ol</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" id="form3Example1" class="form-control" />
+                                    <label class="form-label" for="form3Example1">İsim</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" id="form3Example2" class="form-control" />
+                                    <label class="form-label" for="form3Example2">Soyisim</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form3Example3" class="form-control" />
+                            <label class="form-label" for="form3Example3">E-Mail</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="form3Example4" class="form-control" />
+                            <label class="form-label" for="form3Example4">Şifre</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                            <label class="form-check-label" for="form2Example33">
+                                E-posta ile haber ve promosyonlar almak istemiyorum.
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Kayıt Ol</button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>ya da şunlarla kayıt ol:</p>
+                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- start header codes -->
+    <!-- div.text-white>div.container>div.p-5.text-uppercase.display-4{Frontend Eğitimimize Hoşgeldiniz}+h4{Html5 Css3 JS React}+a.btn.btn-primary+a.btn.btn-danger+a.btn.btn-success -->
+    <header id="header_id">
+        <div class="text-white">
+            <div class="container text-center">
+                <div class="p-5 text-uppercase display-4"></div>
+                <h3 id="Myname">Joshue Kent | Jr.Developer</h3>
+                <a href="" class="btn btn-dark">LinkedIn</a>
+                <a href="" class="btn btn-dark">Medium</a>
+                <a href="" class="btn btn-dark">Behance</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header codes -->
+
+    <!-- start main codes -->
+    <main id="main_id">
+        <!-- messages start -->
+        <!-- section#messages>div>h2.text-center.text-uppercase{Çalışmalarımız}^div.container>div.row>div.text-center.col-12.col-md-4.col-xl-3>i+h4{Html5}+p{lorem15}+button.btn.btn-primary{Daha fazla ..} -->
+        <section id="messages">
+            <div>
+                <h2 class="heading">Çalışmalarım</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="text-center col-12 col-md-12 col-xl-4 mb-4">
+                        <i class="fa-solid fa-mobile text-dark"></i>
+                        <h4>Mobil Geliştirme</h4>
+                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in
+                            dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-outline-danger">İncele</button>
+                    </div>
+
+                    <div class="text-center col-12 col-md-6 col-xl-4 mb-4">
+                        <i class="fa-solid fa-laptop text-dark"></i>
+                        <h4>Web Geliştirme</h4>
+                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in
+                            dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-outline-danger">İncele</button>
+                    </div>
+
+                    <!-- <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
+                        <i class="fa-sharp fa-solid fa-browsers"></i>
+                        <h4>Web Tasarım</h4>
+                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-danger">İncele</button>
+                    </div> -->
+
+                    <div class="text-center col-12 col-md-6 col-xl-4 mb-4">
+                        <i class="fa-solid fa-pen-nib text-dark"></i>
+                        <h4>Grafik Tasarım</h4>
+                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in
+                            dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-outline-danger">İncele</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- messages end -->
+
+        <body data-spy="scroll" data-target="#parallax">
+            <!-- parallax start -->
+            <!-- section#parallax>div.container>div.row>h2.myHeading{Haberler}+p{lorem*12}+button.btn.btn-primary -->
+            <section id="parallax">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="myHeading">Hakkımda</h2>
+                        <p class="line-clamp10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolor
+                            accusantium ut et deserunt. Accusantium eius, dicta voluptates recusandae in possimus
+                            repellendus nesciunt, illum reiciendis nam veniam quam molestias tenetur.
+                            Molestias ab excepturi ex accusamus consectetur, consequuntur expedita! Aperiam sint
+                            corrupti
+                            dolorum aspernatur quidem explicabo officiis quas repellendus. Iste illo facilis error
+                            similique
+                            harum dolor cumque laudantium sapiente libero tempora.
+                            Perferendis ea eveniet impedit deserunt molestias asperiores rerum facilis itaque nemo,
+                            corporis
+                            veritatis adipisci, voluptas nulla temporibus unde provident esse similique eius. Omnis,
+                            deserunt! Aliquid impedit similique natus accusamus ipsam.
+                            A corrupti cupiditate fugiat voluptates, minima officiis mollitia culpa velit sit ea eos
+                            consequatur architecto perspiciatis officia quos esse. Totam sunt eaque ab delectus
+                            inventore
+                            cum quod blanditiis quidem ipsam!
+                            Tempora quisquam iste cupiditate eaque vel? Architecto quia enim, repellat nam ea tempora
+                            odio
+                            distinctio repellendus laudantium aut. A eveniet accusantium quasi possimus quisquam itaque
+                            culpa aperiam voluptate commodi delectus.
+                            Non maxime eius illum quia at explicabo officia ipsa hic officiis reiciendis nam id, harum,
+                            laborum voluptatem soluta? Modi assumenda quaerat vitae, reiciendis repellat inventore quod
+                            beatae architecto nam maiores?
+                            Harum nobis dolore dignissimos.
+                        <div class="col-12"><a class="btn btn-danger">Devamı</a></div>
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- parallax end -->
+
+            <body data-spy="scroll" data-target="#newspaper">
+                <!-- newspaper start -->
+                <!-- section#newspaper>div.container>div.row>h2.myHeading{Haberler}+p{lorem*12}+button.btn.btn-primary -->
+                <section id="newspaper">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="myHeading">Yeni Haberler</h2>
+                            <p class="line-clamp10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+                                dolor
+                                accusantium ut et deserunt. Accusantium eius, dicta voluptates recusandae in possimus
+                                repellendus nesciunt, illum reiciendis nam veniam quam molestias tenetur.
+                                Molestias ab excepturi ex accusamus consectetur, consequuntur expedita! Aperiam sint
+                                corrupti
+                                dolorum aspernatur quidem explicabo officiis quas repellendus. Iste illo facilis error
+                                similique
+                                harum dolor cumque laudantium sapiente libero tempora.
+                                Perferendis ea eveniet impedit deserunt molestias asperiores rerum facilis itaque nemo,
+                                corporis
+                                veritatis adipisci, voluptas nulla temporibus unde provident esse similique eius. Omnis,
+                                deserunt! Aliquid impedit similique natus accusamus ipsam.
+                                A corrupti cupiditate fugiat voluptates, minima officiis mollitia culpa velit sit ea eos
+                                consequatur architecto perspiciatis officia quos esse. Totam sunt eaque ab delectus
+                                inventore
+                                cum quod blanditiis quidem ipsam!
+                                Tempora quisquam iste cupiditate eaque vel? Architecto quia enim, repellat nam ea
+                                tempora odio
+                                distinctio repellendus laudantium aut. A eveniet accusantium quasi possimus quisquam
+                                itaque
+                                culpa aperiam voluptate commodi delectus.
+                                Non maxime eius illum quia at explicabo officia ipsa hic officiis.
+                            <div class="col-4"><a class="btn btn-danger"> Devamı </a></div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- newspaper end -->
+
+                <body data-spy="scroll" data-target="#blog">
+                    <!-- blog start -->
+                    <section id="blog">
+                        <div class="container">
+                            <div class="row">
+                                <h2 class="myHeading">Blog</h2>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/startup-593341_1280.jpg" alt="Title">
+                                        <div class="card-body">
+                                            <h4 class="card-title myHeading">Blog-1</h4>
+                                            <p class="card-text line-clamp8 text-dark">Lorem ipsum dolor sit amet
+                                                consectetur
+                                                adipisicing elit. Impedit iusto nobis voluptatibus consequatur, dicta
+                                                quis vel
+                                                velit? Quia, qui perspiciatis cumque beatae, mollitia error neque,
+                                                architecto ullam
+                                                laborum autem alias!
+                                                Error itaque officiis nisi unde asperiores ipsum, molestiae dolores ab
+                                                aspernatur,
+                                                architecto commodi nesciunt velit eligendi doloremque, consequatur ut
+                                                eum!
+                                                Voluptatum corporis officiis labore deleniti dolores officia nisi
+                                                repellendus
+                                                distinctio?
+                                                Adipisci dignissimos fuga, quam deleniti alias eligendi eaque non ea
+                                                nihil harum
+                                                voluptate inventore cumque ratione vel ipsam quae commodi cum odio
+                                                quidem recusandae
+                                                doloremque? Asperiores rem pariatur nihil quas!
+                                                Cum cumque at eos ut dolores tempora eius repudiandae cupiditate
+                                                assumenda
+                                                laboriosam. Omnis voluptates dicta, laudantium iure fugit modi, eaque
+                                                perspiciatis
+                                                mollitia quam voluptate unde voluptatibus totam enim, at asperiores?
+                                                Quidem velit perspiciatis possimus ab consequatur sapiente veritatis sed
+                                                beatae
+                                                explicabo dolorem officiis quos debitis tempora obcaecati placeat
+                                                quibusdam libero
+                                                doloremque qui quo facilis ullam commodi corrupti, suscipit minima!
+                                                Enim.
+                                                Dolorem perspiciatis, numquam ut, magnam cupiditate vero iusto
+                                                laudantium itaque
+                                                aperiam cum adipisci. Odit, at? At excepturi sit non magnam possimus
+                                                nulla modi
+                                                veritatis quae dolorum, tempora repudiandae, atque fuga.
+                                                Praesentium tenetur libero laborum repellat, assumenda dolore
+                                                dignissimos magni
+                                                accusamus necessitatibus beatae saepe repudiandae officia enim maiores
+                                                dolores
+                                                aliquid. At quisquam consequatur distinctio suscipit soluta fugit,
+                                                reprehenderit
+                                                iure provident vitae?
+                                                Eveniet totam explicabo recusandae voluptatum dolorum, quaerat facere,
+                                                perferendis
+                                                consequuntur odio ipsa id. Minima et, quas non quos saepe illum delectus
+                                                obcaecati.
+                                                Beatae ut officiis ab voluptatem iure neque quod?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/startup-593341_1280.jpg" alt="Title">
+                                        <div class="card-body">
+                                            <h4 class="card-title myHeading">Blog-1</h4>
+                                            <p class="card-text line-clamp8 text-dark">Lorem ipsum dolor sit amet
+                                                consectetur
+                                                adipisicing elit. Impedit iusto nobis voluptatibus consequatur, dicta
+                                                quis vel
+                                                velit? Quia, qui perspiciatis cumque beatae, mollitia error neque,
+                                                architecto ullam
+                                                laborum autem alias!
+                                                Error itaque officiis nisi unde asperiores ipsum, molestiae dolores ab
+                                                aspernatur,
+                                                architecto commodi nesciunt velit eligendi doloremque, consequatur ut
+                                                eum!
+                                                Voluptatum corporis officiis labore deleniti dolores officia nisi
+                                                repellendus
+                                                distinctio?
+                                                Adipisci dignissimos fuga, quam deleniti alias eligendi eaque non ea
+                                                nihil harum
+                                                voluptate inventore cumque ratione vel ipsam quae commodi cum odio
+                                                quidem recusandae
+                                                doloremque? Asperiores rem pariatur nihil quas!
+                                                Cum cumque at eos ut dolores tempora eius repudiandae cupiditate
+                                                assumenda
+                                                laboriosam. Omnis voluptates dicta, laudantium iure fugit modi, eaque
+                                                perspiciatis
+                                                mollitia quam voluptate unde voluptatibus totam enim, at asperiores?
+                                                Quidem velit perspiciatis possimus ab consequatur sapiente veritatis sed
+                                                beatae
+                                                explicabo dolorem officiis quos debitis tempora obcaecati placeat
+                                                quibusdam libero
+                                                doloremque qui quo facilis ullam commodi corrupti, suscipit minima!
+                                                Enim.
+                                                Dolorem perspiciatis, numquam ut, magnam cupiditate vero iusto
+                                                laudantium itaque
+                                                aperiam cum adipisci. Odit, at? At excepturi sit non magnam possimus
+                                                nulla modi
+                                                veritatis quae dolorum, tempora repudiandae, atque fuga.
+                                                Praesentium tenetur libero laborum repellat, assumenda dolore
+                                                dignissimos magni
+                                                accusamus necessitatibus beatae saepe repudiandae officia enim maiores
+                                                dolores
+                                                aliquid. At quisquam consequatur distinctio suscipit soluta fugit,
+                                                reprehenderit
+                                                iure provident vitae?
+                                                Eveniet totam explicabo recusandae voluptatum dolorum, quaerat facere,
+                                                perferendis
+                                                consequuntur odio ipsa id. Minima et, quas non quos saepe illum delectus
+                                                obcaecati.
+                                                Beatae ut officiis ab voluptatem iure neque quod?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/startup-593341_1280.jpg" alt="Title">
+                                        <div class="card-body">
+                                            <h4 class="card-title myHeading">Blog-1</h4>
+                                            <p class="card-text line-clamp8 text-dark">Lorem ipsum dolor sit amet
+                                                consectetur
+                                                adipisicing elit. Impedit iusto nobis voluptatibus consequatur, dicta
+                                                quis vel
+                                                velit? Quia, qui perspiciatis cumque beatae, mollitia error neque,
+                                                architecto ullam
+                                                laborum autem alias!
+                                                Error itaque officiis nisi unde asperiores ipsum, molestiae dolores ab
+                                                aspernatur,
+                                                architecto commodi nesciunt velit eligendi doloremque, consequatur ut
+                                                eum!
+                                                Voluptatum corporis officiis labore deleniti dolores officia nisi
+                                                repellendus
+                                                distinctio?
+                                                Adipisci dignissimos fuga, quam deleniti alias eligendi eaque non ea
+                                                nihil harum
+                                                voluptate inventore cumque ratione vel ipsam quae commodi cum odio
+                                                quidem recusandae
+                                                doloremque? Asperiores rem pariatur nihil quas!
+                                                Cum cumque at eos ut dolores tempora eius repudiandae cupiditate
+                                                assumenda
+                                                laboriosam. Omnis voluptates dicta, laudantium iure fugit modi, eaque
+                                                perspiciatis
+                                                mollitia quam voluptate unde voluptatibus totam enim, at asperiores?
+                                                Quidem velit perspiciatis possimus ab consequatur sapiente veritatis sed
+                                                beatae
+                                                explicabo dolorem officiis quos debitis tempora obcaecati placeat
+                                                quibusdam libero
+                                                doloremque qui quo facilis ullam commodi corrupti, suscipit minima!
+                                                Enim.
+                                                Dolorem perspiciatis, numquam ut, magnam cupiditate vero iusto
+                                                laudantium itaque
+                                                aperiam cum adipisci. Odit, at? At excepturi sit non magnam possimus
+                                                nulla modi
+                                                veritatis quae dolorum, tempora repudiandae, atque fuga.
+                                                Praesentium tenetur libero laborum repellat, assumenda dolore
+                                                dignissimos magni
+                                                accusamus necessitatibus beatae saepe repudiandae officia enim maiores
+                                                dolores
+                                                aliquid. At quisquam consequatur distinctio suscipit soluta fugit,
+                                                reprehenderit
+                                                iure provident vitae?
+                                                Eveniet totam explicabo recusandae voluptatum dolorum, quaerat facere,
+                                                perferendis
+                                                consequuntur odio ipsa id. Minima et, quas non quos saepe illum delectus
+                                                obcaecati.
+                                                Beatae ut officiis ab voluptatem iure neque quod?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/startup-593341_1280.jpg" alt="Title">
+                                        <div class="card-body">
+                                            <h4 class="card-title myHeading">Blog-1</h4>
+                                            <p class="card-text line-clamp8 text-dark">Lorem ipsum dolor sit amet
+                                                consectetur
+                                                adipisicing elit. Impedit iusto nobis voluptatibus consequatur, dicta
+                                                quis vel
+                                                velit? Quia, qui perspiciatis cumque beatae, mollitia error neque,
+                                                architecto ullam
+                                                laborum autem alias!
+                                                Error itaque officiis nisi unde asperiores ipsum, molestiae dolores ab
+                                                aspernatur,
+                                                architecto commodi nesciunt velit eligendi doloremque, consequatur ut
+                                                eum!
+                                                Voluptatum corporis officiis labore deleniti dolores officia nisi
+                                                repellendus
+                                                distinctio?
+                                                Adipisci dignissimos fuga, quam deleniti alias eligendi eaque non ea
+                                                nihil harum
+                                                voluptate inventore cumque ratione vel ipsam quae commodi cum odio
+                                                quidem recusandae
+                                                doloremque? Asperiores rem pariatur nihil quas!
+                                                Cum cumque at eos ut dolores tempora eius repudiandae cupiditate
+                                                assumenda
+                                                laboriosam. Omnis voluptates dicta, laudantium iure fugit modi, eaque
+                                                perspiciatis
+                                                mollitia quam voluptate unde voluptatibus totam enim, at asperiores?
+                                                Quidem velit perspiciatis possimus ab consequatur sapiente veritatis sed
+                                                beatae
+                                                explicabo dolorem officiis quos debitis tempora obcaecati placeat
+                                                quibusdam libero
+                                                doloremque qui quo facilis ullam commodi corrupti, suscipit minima!
+                                                Enim.
+                                                Dolorem perspiciatis, numquam ut, magnam cupiditate vero iusto
+                                                laudantium itaque
+                                                aperiam cum adipisci. Odit, at? At excepturi sit non magnam possimus
+                                                nulla modi
+                                                veritatis quae dolorum, tempora repudiandae, atque fuga.
+                                                Praesentium tenetur libero laborum repellat, assumenda dolore
+                                                dignissimos magni
+                                                accusamus necessitatibus beatae saepe repudiandae officia enim maiores
+                                                dolores
+                                                aliquid. At quisquam consequatur distinctio suscipit soluta fugit,
+                                                reprehenderit
+                                                iure provident vitae?
+                                                Eveniet totam explicabo recusandae voluptatum dolorum, quaerat facere,
+                                                perferendis
+                                                consequuntur odio ipsa id. Minima et, quas non quos saepe illum delectus
+                                                obcaecati.
+                                                Beatae ut officiis ab voluptatem iure neque quod?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/startup-593341_1280.jpg" alt="Title">
+                                        <div class="card-body">
+                                            <h4 class="card-title myHeading">Blog-1</h4>
+                                            <p class="card-text line-clamp8 text-dark">Lorem ipsum dolor sit amet
+                                                consectetur
+                                                adipisicing elit. Impedit iusto nobis voluptatibus consequatur, dicta
+                                                quis vel
+                                                velit? Quia, qui perspiciatis cumque beatae, mollitia error neque,
+                                                architecto ullam
+                                                laborum autem alias!
+                                                Error itaque officiis nisi unde asperiores ipsum, molestiae dolores ab
+                                                aspernatur,
+                                                architecto commodi nesciunt velit eligendi doloremque, consequatur ut
+                                                eum!
+                                                Voluptatum corporis officiis labore deleniti dolores officia nisi
+                                                repellendus
+                                                distinctio?
+                                                Adipisci dignissimos fuga, quam deleniti alias eligendi eaque non ea
+                                                nihil harum
+                                                voluptate inventore cumque ratione vel ipsam quae commodi cum odio
+                                                quidem recusandae
+                                                doloremque? Asperiores rem pariatur nihil quas!
+                                                Cum cumque at eos ut dolores tempora eius repudiandae cupiditate
+                                                assumenda
+                                                laboriosam. Omnis voluptates dicta, laudantium iure fugit modi, eaque
+                                                perspiciatis
+                                                mollitia quam voluptate unde voluptatibus totam enim, at asperiores?
+                                                Quidem velit perspiciatis possimus ab consequatur sapiente veritatis sed
+                                                beatae
+                                                explicabo dolorem officiis quos debitis tempora obcaecati placeat
+                                                quibusdam libero
+                                                doloremque qui quo facilis ullam commodi corrupti, suscipit minima!
+                                                Enim.
+                                                Dolorem perspiciatis, numquam ut, magnam cupiditate vero iusto
+                                                laudantium itaque
+                                                aperiam cum adipisci. Odit, at? At excepturi sit non magnam possimus
+                                                nulla modi
+                                                veritatis quae dolorum, tempora repudiandae, atque fuga.
+                                                Praesentium tenetur libero laborum repellat, assumenda dolore
+                                                dignissimos magni
+                                                accusamus necessitatibus beatae saepe repudiandae officia enim maiores
+                                                dolores
+                                                aliquid. At quisquam consequatur distinctio suscipit soluta fugit,
+                                                reprehenderit
+                                                iure provident vitae?
+                                                Eveniet totam explicabo recusandae voluptatum dolorum, quaerat facere,
+                                                perferendis
+                                                consequuntur odio ipsa id. Minima et, quas non quos saepe illum delectus
+                                                obcaecati.
+                                                Beatae ut officiis ab voluptatem iure neque quod?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img//startup-593341_1280.jpg" alt="Title">
+                                        <div class="card-body">
+                                            <h4 class="card-title myHeading">Blog-1</h4>
+                                            <p class="card-text line-clamp8 text-dark">Lorem ipsum dolor sit amet
+                                                consectetur
+                                                adipisicing elit. Impedit iusto nobis voluptatibus consequatur, dicta
+                                                quis vel
+                                                velit? Quia, qui perspiciatis cumque beatae, mollitia error neque,
+                                                architecto ullam
+                                                laborum autem alias!
+                                                Error itaque officiis nisi unde asperiores ipsum, molestiae dolores ab
+                                                aspernatur,
+                                                architecto commodi nesciunt velit eligendi doloremque, consequatur ut
+                                                eum!
+                                                Voluptatum corporis officiis labore deleniti dolores officia nisi
+                                                repellendus
+                                                distinctio?
+                                                Adipisci dignissimos fuga, quam deleniti alias eligendi eaque non ea
+                                                nihil harum
+                                                voluptate inventore cumque ratione vel ipsam quae commodi cum odio
+                                                quidem recusandae
+                                                doloremque? Asperiores rem pariatur nihil quas!
+                                                Cum cumque at eos ut dolores tempora eius repudiandae cupiditate
+                                                assumenda
+                                                laboriosam. Omnis voluptates dicta, laudantium iure fugit modi, eaque
+                                                perspiciatis
+                                                mollitia quam voluptate unde voluptatibus totam enim, at asperiores?
+                                                Quidem velit perspiciatis possimus ab consequatur sapiente veritatis sed
+                                                beatae
+                                                explicabo dolorem officiis quos debitis tempora obcaecati placeat
+                                                quibusdam libero
+                                                doloremque qui quo facilis ullam commodi corrupti, suscipit minima!
+                                                Enim.
+                                                Dolorem perspiciatis, numquam ut, magnam cupiditate vero iusto
+                                                laudantium itaque
+                                                aperiam cum adipisci. Odit, at? At excepturi sit non magnam possimus
+                                                nulla modi
+                                                veritatis quae dolorum, tempora repudiandae, atque fuga.
+                                                Praesentium tenetur libero laborum repellat, assumenda dolore
+                                                dignissimos magni
+                                                accusamus necessitatibus beatae saepe repudiandae officia enim maiores
+                                                dolores
+                                                aliquid. At quisquam consequatur distinctio suscipit soluta fugit,
+                                                reprehenderit
+                                                iure provident vitae?
+                                                Eveniet totam explicabo recusandae voluptatum dolorum, quaerat facere,
+                                                perferendis
+                                                consequuntur odio ipsa id. Minima et, quas non quos saepe illum delectus
+                                                obcaecati.
+                                                Beatae ut officiis ab voluptatem iure neque quod?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- blog end -->
+    </main>
+    <!-- end main codes -->
+
+
+    <!--start contact codes -->
+    <body data-spy="scroll" data-target="#contact">
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <h2 class="myHeding">İletişim</h2>
+                    <div class="col-md-6">
+                        <iframe class="map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95929.42933875104!2d36.231296855732076!3d41.29157310704842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x408877e97607d663%3A0xb939cc265fdeb52!2sSamsun!5e0!3m2!1str!2str!4v1687436097621!5m2!1str!2str"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label"></label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="İsim">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label"></label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Soyisim">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label"></label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="E-Mail">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" id="form4Example3" rows="4"
+                                    placeholder="Mesajınız..."></textarea>
+                                <label class="form-label" for="form4Example3"></label>
+                            </div>
+                            <!-- Checkbox -->
+                            <div class="col-md-12">
+                                <input class="form-check-input" type="checkbox" value="" id="form4Example4" />
+                                <label class="form-check-label" for="form4Example4">
+                                    Mesajın kopyasını bana da gönder.
+                                </label>
+                            </div>
+                            <div class="col-md-12"></div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-danger">Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end contact codes -->
+
+
+        <!-- start footer codes -->
+        <footer id="footer_id" class="bg-dark">
+            <div class="text-center p-5" id="copy_right">2021- <span id="date_id"></span> &copy; Bütün Haklar saklıdır
+            </div>
+        </footer>
+        <!-- end footer codes -->
+
+
+        <a href="#header_id" id="back_top" class="btn btn-danger"><i class="fa-solid fa-arrow-up-long"></i></a>
+
+        <!-- end codes -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous" />
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+            crossorigin="anonymous" />
+        </script>
+
+        <!-- external JS -->
+        <script src="template.js"></script>
+    </body>
+
+</html>

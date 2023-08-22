@@ -1,0 +1,262 @@
+/*
+Project : One Page
+Author  : Hifanur Öner
+Date    : 14 / June /2023
+Version : v.1
+*/
+
+
+/* Root */
+:root {
+    --templateBgColor: rgb(32, 29, 29);
+}
+
+
+/* Common Property */
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    opacity: 0.9;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.8);
+    transition: 3s all;
+    cursor: pointer;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+.btn {
+    font-size: 1.1rem;
+}
+
+.my_clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.heading {
+    /*ÇALIŞMALARIMIZ*/
+    text-align: center;
+    font-size: 2.7rem;
+    text-decoration: none;
+    margin-bottom: 2.7rem;
+    text-transform: uppercase;
+    text-shadow: 0.4px -0.9px rgba(0, 0, 0, 0.9);
+    opacity: 0.8;
+}
+
+/* my special Size */
+.fSize1 {
+    font-size: 1rem;
+    /* 15*1 */
+}
+
+.fSize2 {
+    font-size: 2rem;
+    /* 15*2 */
+}
+
+
+/* Line-clamp */
+.line-clamp4 {
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.line-clamp5 {
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.line-clamp8 {
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.line-clamp10 {
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.line-clamp20 {
+    -webkit-line-clamp: 20;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+
+
+h4 {
+    font-size: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+#Myname {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/*----------------------------------------*/
+
+
+/* Navbar */
+
+.dark_mode {
+    background-color: var(--templateBgColor);
+    color: #ffffff;
+
+}
+
+ul li form{
+    margin-right: 1rem;
+    
+}
+
+
+
+/* Header */
+
+header {
+    background-image: url("./img/web-design-2906159_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 70vh;
+    padding-top: 7rem;
+
+}
+
+
+/* Messages  -main- (ÇALIŞAMLARIMIZ)*/
+#messages {
+    justify-content: center;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+#messages>.container>.row>.text-center>p {
+    /* color:black!important; */
+    color: black !important;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+#messages i {
+    color: rgb(131, 19, 19);
+    font-size: 3.8rem;
+}
+
+/* parallax */
+#parallax {
+    background-color: transparent;
+    background-image: url('./img/coffee-1284041_1280.jpg');
+    background-size: cover;
+    height: 27rem;
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#parallax>h2,
+p {
+    color: black !important;
+    font-size: 19px;
+}
+
+/* newspaper */
+#newspaper {
+    height: 27rem;
+    padding: 2rem;
+}
+
+#newspaper p {
+    color: black !important;
+    text-align: justify;
+}
+
+/* blog */
+#blog {
+    background-color: #212529;
+}
+
+/* contact*/
+#contact {
+    margin-top: 2rem;
+
+}
+
+#contact .container .row .map {
+    height: 56vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#contact .row form {
+    text-align: center;
+}
+
+
+
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    min-height: 7rem;
+    width: auto;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+/* Back top */
+#back_top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#back_top:hover {
+    opacity: 0.8;
+}
